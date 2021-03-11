@@ -2,17 +2,11 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `java-library`
-    kotlin("jvm") version "1.4.30-RC"
+    kotlin("jvm") version "1.5.0-M1"
 }
 
-allprojects {
-    tasks.withType<KotlinCompile>().configureEach {
-        println("Configuring $name in project ${project.name}...")
-        kotlinOptions {
-            useIR = true
-        }
-    }
-}
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions.useIR = true
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
