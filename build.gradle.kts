@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `java-library`
-    kotlin("jvm") version "1.5.0-M1"
+    kotlin("jvm") version "1.5.0-M2"
 }
 
 val compileKotlin: KotlinCompile by tasks
@@ -23,7 +23,7 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
 
-    testImplementation("junit:junit:4.13.1")
+    testImplementation("junit:junit:4.13.2")
     testImplementation("com.nhaarman:expect.kt:1.0.0")
     // testImplementation("org.mockito:mockito-inline:3.7.0")
 }
